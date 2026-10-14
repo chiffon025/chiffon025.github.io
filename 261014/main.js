@@ -26,4 +26,5 @@ console.log(numE * numF);
 console.log(numE / numF);
 console.log(numE % numF);
 
+console.log("実行官僚");
 
