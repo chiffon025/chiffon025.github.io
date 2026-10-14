@@ -23,8 +23,6 @@ const numF = "3";
 console.log(numE + numF);
 console.log(numE - numF);
 console.log(numE * numF);
-console.log(numE / numF);
+console.log(Math.floor(numE / numF));
 console.log(numE % numF);
-
-console.log("実行官僚");
 
