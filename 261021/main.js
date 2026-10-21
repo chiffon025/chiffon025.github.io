@@ -11,3 +11,11 @@ console.log(typeof "123");
 
 let x;
 console.log(x);
+
+function welcome(name) {
+  console.log(name + "さん、ようこそ");
+}
+
+welcome("はなこ");
+welcome("たろう");
+welcome("じろう");
