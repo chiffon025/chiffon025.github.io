@@ -45,15 +45,21 @@ console.log(splitBill(1000, 3));
 console.log("------------------");
 
 function jugdeAge(age) {
+  let result;
   if (age <= 0) {
-    console.log(`${age}歳はエラーです`);
+    result = "エラー";
+    //console.log(`${age}歳はエラーです`);
   } else if (age < 18) {
-    console.log(`${age}歳は未成年です`);
+    result = "未成年";
+    //console.log(`${age}歳は未成年です`);
   } else if (age >= 65) {
-    console.log(`${age}歳は高齢者です`);
+    result = "高齢者";
+    //console.log(`${age}歳は高齢者です`);
   } else {
-    console.log(`${age}歳は成人です`);
+    result = "成人";
+    //console.log(`${age}歳は成人です`);
   }
+  console.log(`${age}歳は${result}です`);
 }
 
 jugdeAge(25);
