@@ -19,3 +19,14 @@ function welcome(name) {
 welcome("はなこ");
 welcome("たろう");
 welcome("じろう");
+
+function welcome2(name, favorite) {
+  console.log(name + "さんの好きな食べ物は" + favorite + "です");
+}
+
+welcome2("はなこ", "すし");
+welcome2("たろう", "ラーメン");
+welcome2("じろう", "ピザ");
+
+welcome();
+welcome2();
