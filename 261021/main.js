@@ -42,3 +42,36 @@ function splitBill(a, b) {
 console.log(multiply(3, 4));
 console.log(splitBill(1000, 3));
 
+console.log("------------------");
+
+function jugdeAge(age) {
+  if (age <= 0) {
+    console.log(`${age}歳はエラーです`);
+  } else if (age < 18) {
+    console.log(`${age}歳は未成年です`);
+  } else if (age >= 65) {
+    console.log(`${age}歳は高齢者です`);
+  } else {
+    console.log(`${age}歳は成人です`);
+  }
+}
+
+jugdeAge(25);
+jugdeAge(15);
+jugdeAge(0);
+jugdeAge(70);
+
+console.log("------------------");
+
+function jugdeYear(year) {
+  if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+    console.log("366日");
+  } else if (year % 4 === 0) {
+    console.log("366日");
+  } else {
+    console.log("365日");
+  }
+}
+jugdeYear(2020);
+jugdeYear(2000);
+jugdeYear(1989);
