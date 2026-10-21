@@ -30,3 +30,15 @@ welcome2("じろう", "ピザ");
 
 welcome();
 welcome2();
+
+console.log("------------------");
+
+function multiply(a, b) {
+  return a * b;
+}
+function splitBill(a, b) {
+  return Math.ceil(a / b);
+}
+console.log(multiply(3, 4));
+console.log(splitBill(1000, 3));
+
