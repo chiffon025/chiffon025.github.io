@@ -4,12 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    body {
+        background-color: pink;
+    }
+    #pickOne {
+        background-color: #61ff63;
+    }
+    #container {
+        text-align: center;
+    }
+</style>
 </head>
 <body>
+<div id ="container">
   <h1>ラディットみくじ</h1>
   <h2>何が出るかな！</h2>
-  <button id="pickOne">おみくじを引く！</button>
-  <img id="omikujiImage" src="image/omikuji.png" alt="おみくじ" width="300">  
+  <img id="omikujiImage" src="image/omikuji.png" alt="おみくじ" width="300"> 
+  <br>
+  <button id="pickOne"><img src="image/button.png" alt="おみくじを引く"></button>
+  <h3 id="count">引いた回数: 0</h3>
+</div>
 </body>
 <script src="main_omikuji.js"></script>
 </html>
