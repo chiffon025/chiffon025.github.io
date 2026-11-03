@@ -14,15 +14,24 @@
     #container {
         text-align: center;
     }
+    #header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
 </head>
 <body>
 <div id ="container">
-  <h1>ラディットみくじ</h1>
+    <div id="header">
+        <img src="image/wai.png" alt="ラディットみくじ" width="70">
+        <h1>ラディットみくじ</h1>
+        <img src="image/nun.png" alt="ラディットみくじ" width="70">
+    </div>
   <h2>何が出るかな！</h2>
-  <img id="omikujiImage" src="image/omikuji.png" alt="おみくじ" width="300"> 
+  <img id="omikujiImage" src="image/omikuji.png" alt="おみくじ" width="270"> 
   <br>
-  <button id="pickOne"><img src="image/button.png" alt="おみくじを引く"></button>
+  <button id="pickOne"><img src="image/button.png" alt="おみくじを引く" width="180"></button>
   <h3 id="count">引いた回数: 0</h3>
 </div>
 </body>
