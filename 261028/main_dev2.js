@@ -6,11 +6,13 @@ for (let i = 0; i < favalites.length; i++) {
 }
 
 
-function pickOne() {
-    let title = document.querySelector("h1");
+function pickOne() {  
     let n = Math.floor(Math.random() * favalites.length);
-    title.textContent = favalites[n];
+    return favalites[n];
 }
 
 let pickOneBtn = document.querySelector("#pickOne");
-pickOneBtn.addEventListener("click", pickOne);
+let title = document.querySelector("h1");
+pickOneBtn.addEventListener("click", function() {
+    title.textContent = pickOne();
+});
