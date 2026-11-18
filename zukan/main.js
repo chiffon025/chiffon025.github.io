@@ -45,7 +45,7 @@ function render(){
                 favDisplayCount += 1;
                 let rarityStar = "";
                 for(let i = 0; i < character.rarity; i++) {
-                    rarityStar += "★";
+                    rarityStar += "⭐";
                 }
                 let favoriteClass;          
                 if(favoriteCharacters.includes(character)){
@@ -98,7 +98,7 @@ function render(){
         visibleCharacters.forEach((character) => {
             let rarityStar = "";
             for(let i = 0; i < character.rarity; i++) {
-                rarityStar += "★";
+                rarityStar += "⭐";
             }
             let favoriteClass;          
             if(favoriteCharacters.includes(character)){
