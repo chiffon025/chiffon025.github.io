@@ -7,27 +7,39 @@
     <title>Document</title>
     <style>
         .active {background: #595959; color: white; }
-        .favorited {background: none; border: none; cursor: pointer; color: red;}
-        .favorite-button {background: none; border: none; cursor: pointer;}
+        .favorited {background: none; border: none; cursor: pointer; color: red; position: absolute; top: 7px; right: 7px;}
+        .favorite-button {background: none; border: none; cursor: pointer; position: absolute; top: 7px; right: 7px;}
+        .card {position: relative;}
+        .card-body {width: 100%; text-align: center;}
+        .card[data-type="炎"]{background-color: #fff5e8;}
+        .card[data-type="水"]{background-color: #E8F5FF;}
+        .card[data-type="草"]{background-color: #f0ffe8;}
+        .search-sort {display: flex; gap: 8px; align-items: center; margin: 12px 0 20px;}
+        .search-sort input {flex: 1;}
+        .search-sort select {width: 220px;}
+
+
+
     </style>
 </head>
 <body>
     <div class="container py-3">
-    <p class="h1">キャラ図鑑</p>
+    <p class="h1">キャラ図鑑</p> 
+    <button class="type-tab btn btn-outline-secondary rounded-pill">すべて</button>
+    <button class="type-tab btn btn-outline-secondary rounded-pill">炎</button>
+    <button class="type-tab btn btn-outline-secondary rounded-pill">水</button>
+    <button class="type-tab btn btn-outline-secondary rounded-pill">草</button>
+    <button class="type-tab btn btn-outline-secondary rounded-pill">おきにいり</button>
     <p>12体中 <span id="displayCount">12</span>体を表示</p>
-    <button class="type-tab">すべて</button>
-    <button class="type-tab">炎</button>
-    <button class="type-tab">水</button>
-    <button class="type-tab">草</button>
-    <button class="type-tab">おきにいり</button>
-    <br>
-    <input  id="searchInput" placeholder="名前で検索">
-    <select id ="sortSelect">
+    <div class="search-sort">
+    <input  id="searchInput" class="form-control" placeholder="名前で検索">
+    <select id ="sortSelect" class="form-select">
         <option value="default">登録順</option>
         <option value="attackHigh">攻撃力が高い順</option>
         <option value="attackLow">攻撃力が低い順</option>
         <option value="rarityHigh">レア度が高い順</option>
     </select>
+    </div>
     <ul class="row g-3 cols-4 list-unstyled"  id="characterList"></ul>
     <script src="https://morimorihoge.github.io/teu2026f/characters.js"></script>
     <script src="main.js"></script>

@@ -7,6 +7,7 @@ let favoriteCharacters = []; // お気に入りのキャラを集める
 
 function render(){
     let visibleCharacters = []; // 表示するキャラを集める
+    //let defultfav = favoriteCharacters.slice();
     characterList.innerHTML = "";
     characters.forEach((character) => {
         let matchesType = selectedType === "すべて" || character.type === selectedType;
@@ -53,10 +54,10 @@ function render(){
                     favoriteClass = "";
                 }
             
-                let imageTag = `<img src="${character.image}" width="80">`;
+                let imageTag = `<img src="${character.image}" width="100">`;
                 characterList.innerHTML += 
                 `<li class="col-md-3 col-sm-4 col-6">
-                <div class="card"> 
+                <div class="card" data-type="${character.type}"> 
                 <div class="card-body">
                     ${imageTag} <button class="favorite-button ${favoriteClass}" data-name = "${character.name}">♡</button><br>
                 <p class="card-text">
@@ -105,10 +106,10 @@ function render(){
             }else{
                 favoriteClass = "";
             }
-            let imageTag = `<img src="${character.image}" width="80">`;
+            let imageTag = `<img src="${character.image}" width="100">`;
             characterList.innerHTML += 
             `<li class="col-md-3 col-sm-4 col-6">
-            <div class="card">
+            <div class="card" data-type="${character.type}">
             <div class="card-body">
                 ${imageTag} <button class="favorite-button ${favoriteClass}" data-name="${character.name}">♡</button><br>
             <p class="card-text">
@@ -168,3 +169,5 @@ searchInput.addEventListener("input",() =>{
     searchWord = searchInput.value;
     render();
 });
+
+render();
