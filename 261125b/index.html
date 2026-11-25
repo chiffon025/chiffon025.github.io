@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>週間気温チェック</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- 自分で作るCSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container py-5">
+
+        <div class="text-center mb-4">
+            <h1 class="fw-bold">週間気温チェック</h1>
+            <p class="text-muted">
+                今週の気温を確認して、服装を決めよう！
+            </p>
+        </div>
+
+        <!-- 地域選択 -->
+        <div class="card shadow-sm p-4 mb-4">
+
+            <label for="areaSelect" class="form-label fw-bold">
+                地域を選択
+            </label>
+
+            <select id="areaSelect" class="form-select">
+                <option value="130000">東京</option>
+                <option value="140000">神奈川</option>
+                <option value="110000">埼玉</option>
+                <option value="120000">千葉</option>
+                <option value="230000">愛知</option>
+                <option value="270000">大阪</option>
+            </select>
+
+        </div>
+
+        <!-- グラフ -->
+        <div class="card shadow-sm p-4 mb-4">
+
+            <h2 class="h5 fw-bold mb-4">
+                週間気温グラフ
+            </h2>
+
+            <div class="chart-area">
+                <canvas id="temperatureChart"></canvas>
+            </div>
+
+        </div>
+
+        <!-- いちばん寒い日 -->
+        <div class="card shadow-sm p-4 mb-4">
+
+            <h2 class="h5 fw-bold">
+                いちばん寒い日
+            </h2>
+
+            <p id="coldestDay" class="mb-0">
+                データを取得しています...
+            </p>
+
+        </div>
+
+        <!-- 出典 -->
+        <p class="text-end text-muted small">
+            出典：<a href="https://www.jma.go.jp/"
+                target="_blank" rel="noopener noreferrer">
+                気象庁ホームページ
+            </a>
+        </p>
+
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <!-- 自分で作るJavaScript -->
+    <script src="main.js"></script>
+
+</body>
+</html>

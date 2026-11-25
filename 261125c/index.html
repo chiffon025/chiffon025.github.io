@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>週間気温チェック（服装選び用）</title>
+  <!-- Bootstrap 5.3.8 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+  <div class="container py-4">
+    <header class="mb-4 text-center">
+      <h1 class="h3 fw-bold">週間気温チェック</h1>
+      <p class="text-muted small mb-0">1週間の最高・最低気温を確認して今週の服装を決めよう</p>
+    </header>
+
+    <main class="card shadow-sm">
+      <div class="card-body">
+        <!-- 地域選択セレクト -->
+        <div class="row align-items-center mb-4">
+          <div class="col-12 col-md-4">
+            <label for="area-select" class="form-label fw-bold mb-1 mb-md-0">地域を選択：</label>
+          </div>
+          <div class="col-12 col-md-8">
+            <select id="area-select" class="form-select">
+              <option value="016000">北海道（札幌）</option>
+              <option value="040000">宮城県（仙台）</option>
+              <option value="130000" selected>東京都（東京）</option>
+              <option value="150000">新潟県（新潟）</option>
+              <option value="230000">愛知県（名古屋）</option>
+              <option value="270000">大阪府（大阪）</option>
+              <option value="340000">広島県（広島）</option>
+              <option value="400000">福岡県（福岡）</option>
+              <option value="471000">沖縄県（那覇）</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- いちばん寒い日の表示（Nice機能） -->
+        <div id="coldest-info" class="alert alert-info text-center fw-bold" role="alert">
+          データを読み込み中...
+        </div>
+
+        <!-- 折れ線グラフ描画エリア -->
+        <div class="chart-container">
+          <canvas id="temp-chart"></canvas>
+        </div>
+      </div>
+
+      <!-- 出典表示 -->
+      <div class="card-footer text-end text-muted small">
+        出典：気象庁ホームページ
+      </div>
+    </main>
+  </div>
+
+  <!-- Bootstrap 5.3.8 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Chart.js 4.4.1 -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

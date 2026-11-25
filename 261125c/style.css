@@ -1,0 +1,6 @@
+/* グラフの高さを画面サイズに合わせて見やすく固定 */
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 360px;
+}

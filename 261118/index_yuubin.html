@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .active {background: #595959; color: white; }
+        .favorited {background: none; border: none; cursor: pointer; color: red; position: absolute; top: 7px; right: 7px;}
+        .favorite-button {background: none; border: none; cursor: pointer; position: absolute; top: 7px; right: 7px;}
+        .card {position: relative;}
+        .card-body {width: 100%; text-align: center;}
+        .card[data-type="炎"]{background-color: #fff5e8;}
+        .card[data-type="水"]{background-color: #E8F5FF;}
+        .card[data-type="草"]{background-color: #f0ffe8;}
+        .search-sort {display: flex; gap: 8px; align-items: center; margin: 12px 0 20px;}
+        .search-sort input {flex: 1;}
+        .search-sort select {width: 220px;}
+
+    </style>
+</head>
+<body>
+    <div class="container py-3">
+    <p class="h1">住所検索</p> 
+    <div class="search-sort">
+    <input  id="zipCode" class="form-control" placeholder="郵便番号を入力">
+    <button id="searchButton" class="btn btn-outline-secondary rounded-pill">検索</button>
+    </div>
+    <input id="address" class="form-control" placeholder="ここに住所">
+    <p id="messageArea"></p>
+    <script src="main_yuubin.js"></script>
+    </div>
+</body>
+</html>

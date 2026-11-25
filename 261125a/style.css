@@ -1,0 +1,38 @@
+
+body {
+    background-color: #f5f8fc;
+}
+
+/* カードの角を丸くする */
+.card {
+    border: none;
+    border-radius: 16px;
+}
+
+/* 見出し */
+h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #334b68;
+}
+
+/* 入力欄 */
+.form-control {
+    padding: 10px;
+}
+
+/* メッセージ */
+#message {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* 成功メッセージ */
+.message-success {
+    color: #198754;
+}
+
+/* エラーメッセージ */
+.message-error {
+    color: #dc3545;
+}

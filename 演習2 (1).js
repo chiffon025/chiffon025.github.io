@@ -1,4 +1,13 @@
 // characters.jsはデータ読み込み済みの状態で動かす前提
+let characters = [];
+let dataUrl = "https://morimorihoge.github.io/teu2026f/characters.json";
+
+async function loadCharacters() {
+  let response = await fetch(dataUrl);
+  characters = await response.json();  // JSON を配列に直す
+}
+
+loadCharacters();
 
 // 攻撃力が高い順
 console.log("===攻撃力が高い順===");
